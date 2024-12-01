@@ -39,7 +39,7 @@ function Auth() {
             user: userInfo.user,
           });
           setLoading({ ...loading, signin: false });
-          navigate(navStateData?.state.redirect || "/");
+          navigate(navStateData?.state?.redirect || "/");
         })
         .catch((err) => {
           // console.log(err);
