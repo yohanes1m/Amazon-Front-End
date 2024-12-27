@@ -11,8 +11,6 @@ import { db } from "../../Utility/firebase";
 import { useNavigate } from "react-router-dom";
 import { Type } from "../../Utility/action.type";
 function Payment() {
-
-  
   const [{ user, basket }, dispatch] = useContext(DataContext);
 
   const totalItem = basket?.reduce((amount, item) => {
@@ -50,6 +48,7 @@ function Payment() {
       const clientSecret = response.data?.clientSecret;
 
       //2.client side confirmation using stripe
+      console.log(clientSecret);
 
       const { paymentIntent } = await stripe.confirmCardPayment(clientSecret, {
         payment_method: {

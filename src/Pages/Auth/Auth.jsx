@@ -68,18 +68,18 @@ function Auth() {
 
   return (
     <section className={classes.login}>
-      {/* Logo */}
-      <Link to="/">
-        <img
-          src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a9/Amazon_logo.svg/1024px-Amazon_logo.svg.png"
-          alt="sigup amazon logo"
-        />
-      </Link>
+        {/* Logo */}
+        <Link to="/">
+          <img
+            src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a9/Amazon_logo.svg/1024px-Amazon_logo.svg.png"
+            alt="sigup amazon logo"
+          />
+        </Link>
 
-      {/* login form */}
+        {/* login form */}
 
-      <div className={classes.login_container}>
-        <h1>Sign-in</h1>
+        <div className={classes.login_container}>
+          <h1>Sign-in</h1>
         {navStateData?.state?.msg && (
           <small
             style={{
